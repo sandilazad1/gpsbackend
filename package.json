@@ -2,9 +2,9 @@
   "name": "gpsbackend",
   "version": "1.0.0",
   "description": "gps",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/sandilazad1/gpsbackend/issues"
   },
-  "homepage": "https://github.com/sandilazad1/gpsbackend#readme"
+  "homepage": "https://github.com/sandilazad1/gpsbackend#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
 }
