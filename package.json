@@ -1,0 +1,19 @@
+{
+  "name": "gpsbackend",
+  "version": "1.0.0",
+  "description": "gps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandilazad1/gpsbackend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sandilazad1/gpsbackend/issues"
+  },
+  "homepage": "https://github.com/sandilazad1/gpsbackend#readme"
+}
