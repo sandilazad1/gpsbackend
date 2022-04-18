@@ -7,12 +7,9 @@ router.get('/',(req,res)=>{
 });
 
 router.post('/',(req,res)=>{
-    const name =  req.body.name;
-    console.log(name);
-
-    res.status(201).json({
-        message: name
-    })
+    const Name =  req.body;
+     console.log(Name);
+    res.status(201).json(Name)
 });
 
 module.exports = router

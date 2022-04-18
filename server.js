@@ -1,13 +1,14 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
-
 const Obdi =require('./routes/odbi_data')
 const User = require("./routes/users")
 
 const app = express();
 app.use(morgan('combined'))
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.json({ type: 'application/*+json' }))
+app.use(express.json());
+
 
 const PORT = process.env.PORT || 3000
 
