@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
 
-const Obdi =require('./routes/odbi_date')
+const Obdi =require('./routes/odbi_data')
 const User = require("./routes/users")
 
 const app = express();

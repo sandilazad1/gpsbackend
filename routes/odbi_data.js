@@ -7,7 +7,12 @@ router.get('/',(req,res)=>{
 });
 
 router.post('/',(req,res)=>{
-    res.send(`<h1>get obdi_data<h1/>`);
+    const name =  req.body.name;
+    console.log(name);
+
+    res.status(201).json({
+        message: name
+    })
 });
 
 module.exports = router
