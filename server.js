@@ -3,10 +3,12 @@ const bodyParser = require('body-parser')
 const morgan = require('morgan')
 const Obdi = require('./routes/odbi_data')
 const User = require("./routes/users")
-
+var cors = require('cors')
+ 
 const db = require('./database/db')
 
 const app = express();
+app.use(cors())
 app.use(morgan('combined'))
 app.use(bodyParser.json({ type: 'application/*+json' }))
 app.use(express.json());
