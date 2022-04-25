@@ -12,8 +12,8 @@ router.get('/',(req,res)=>{
 
 router.post('/',(req,res)=>{
     const DATA =  req.body;
+    console.log(DATA);
     obdi_data.create({deviceID:"02",author:"sandil",data:DATA});
-     console.log(DATA);
     res.status(201).json(DATA)
 });
 
