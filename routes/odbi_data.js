@@ -1,8 +1,9 @@
+const mongoose = require('mongoose');
 const express = require("express");
 const router = express.Router();
-const db = require('../database/db')
+const obdi_data_schema = require('../database/model')
 
-
+const obdi_data = mongoose.model('obdi_data',obdi_data_schema);
 
 
 router.get('/',(req,res)=>{
@@ -10,13 +11,10 @@ router.get('/',(req,res)=>{
 });
 
 router.post('/',(req,res)=>{
-    const body =  req.body;
-    db.obdi_data.create(body, function (err, small) {
-        if (err) return handleError(err);
-        // saved!
-      });
-     console.log(Name);
-    res.status(201).json(Name)
+    const DATA =  req.body;
+    obdi_data.create({deviceID:"02",author:"sandil",data:DATA});
+     console.log(DATA);
+    res.status(201).json(DATA)
 });
 
 module.exports = router
