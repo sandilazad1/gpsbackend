@@ -1,5 +1,8 @@
 const express = require("express");
 const router = express.Router();
+const db = require('../database/db')
+
+
 
 
 router.get('/',(req,res)=>{
@@ -7,7 +10,11 @@ router.get('/',(req,res)=>{
 });
 
 router.post('/',(req,res)=>{
-    const Name =  req.body;
+    const body =  req.body;
+    db.obdi_data.create(body, function (err, small) {
+        if (err) return handleError(err);
+        // saved!
+      });
      console.log(Name);
     res.status(201).json(Name)
 });

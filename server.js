@@ -1,8 +1,10 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
-const Obdi =require('./routes/odbi_data')
+const Obdi = require('./routes/odbi_data')
 const User = require("./routes/users")
+
+const db = require('./database/db')
 
 const app = express();
 app.use(morgan('combined'))
